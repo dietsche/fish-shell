@@ -112,7 +112,16 @@ complete -f -c git -n '__fish_git_needs_command' -a archive -d 'Create an archiv
 
 ### bisect
 complete -f -c git -n '__fish_git_needs_command' -a bisect -d 'Find the change that introduced a bug by binary search'
-# TODO options
+complete -f -c git -n '__fish_git_using_command bisect' -a 'help' -d 'long help message'
+complete -f -c git -n '__fish_git_using_command bisect' -a 'start' -d 'start bisection'
+complete -f -c git -n '__fish_git_using_command bisect' -a 'bad' -d 'mark bad revision'
+complete -f -c git -n '__fish_git_using_command bisect' -a 'good' -d 'mark good revision'
+complete -f -c git -n '__fish_git_using_command bisect' -a 'skip' -d 'mark revision(s) that should not be tested'
+complete -f -c git -n '__fish_git_using_command bisect' -a 'reset' -d 'clean up bisection state and return to HEAD or a specific commit'
+complete -f -c git -n '__fish_git_using_command bisect' -a 'visualize view' -d 'view remaining suspects in gitk / git log'
+complete -r -c git -n '__fish_git_using_command bisect' -a 'replay' -d 'replay log created with git bisect log'
+complete -f -c git -n '__fish_git_using_command bisect' -a 'log' -d 'show what has been done so far'
+complete -r -c git -n '__fish_git_using_command bisect' -a 'run' -d 'specify a script that tells git if the commit is good or bad'
 
 ### branch
 complete -f -c git -n '__fish_git_needs_command' -a branch -d 'List, create, or delete branches'
